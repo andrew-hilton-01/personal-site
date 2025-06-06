@@ -1,5 +1,5 @@
 import githubMark from '../assets/github-mark-white.svg'
-import linkedIn from '../assets/inBug-White.png'
+import linkedIn from '../assets/InBug-White.png'
 import xLogo from  '../assets/xlogo.svg'
 {/*import gMail from '../assets/mail.svg'*/}
 export default function Sidebar() {
