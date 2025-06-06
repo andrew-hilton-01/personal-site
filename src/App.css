@@ -1,0 +1,153 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #031c3d;
+}
+
+h2 {
+  text-align: center;
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  gap: 40px;
+  padding-left: 20%;
+  padding-right: 20%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .parent {
+    flex-direction: column;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+}
+.sidebar, .main {
+  min-width: 0;
+
+  /* do NOT set width: 100vw or width: 100% on these! */
+}
+
+.sidebar {
+  flex: 0 0 320px;
+  max-width: 90vw;
+  min-width: 500px;
+  width: 100%;
+  padding: 32px 24px;
+  background: rgba(34, 34, 34, 0);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  max-height: 80%;
+  box-sizing: border-box;
+  /* so it never overflows */
+  overflow-x: auto;
+  position: sticky;
+  top: 0;
+  align-self: flex-start; /* ensures it doesn't stretch vertically in flex */
+  /* usual width/padding/background styles */
+  height: fit-content; /* or just let it grow naturally */
+  z-index: 1; /* in case you want it above backgrounds */
+}
+@media (max-width: 700px) {
+  .sidebar {
+    position: static;
+    top: unset;
+  }
+}
+
+.sidebar > * {
+  padding-bottom: 128px;  /* inner spacing inside each child */
+}
+
+.sidebar__name {
+  margin-bottom: 1rem;
+}
+
+.sidebar__nav{
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: flex-start;
+  align-items: center;
+  color:#fff;
+}
+.sidebar__nav > * {
+  color: #fff;
+}
+
+.sidebar__desc {
+  padding-bottom: 128px;
+}
+
+.sidebar__socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;           /* vertical alignment (does nothing here since they're all same height) */
+  justify-content: center;       /* horizontal alignment: center them in the container */
+  gap: 32px;
+}
+
+.main {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  min-height: 100vh;
+  color: #fff;
+  box-sizing: border-box;
+  overflow-x: auto;
+  
+}
+.project-thumbnails {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%; /* defensive, but width: 100% is what actually matters here */
+  border-radius: 8px;
+  object-fit: cover; /* or contain, see below */
+}
+
+.skills-list {
+  display: block;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.skills{
+  text-align: center;
+}
+
+
+/* responsive: sidebar collapses to top, main below */
+@media (max-width: 700px) {
+  .parent {
+    flex-direction: column;
+  }
+  .sidebar {
+    flex: none;
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
+    min-height: unset;
+    border-right: none;
+    border-bottom: 1px solid #333a;
+    padding: 16px 8px;
+  }
+  .main {
+    min-width: 0;
+    width: 100vw;
+    padding: 16px 4px;
+    gap: 16px;
+  }
+}
