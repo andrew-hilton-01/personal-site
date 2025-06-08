@@ -9,7 +9,10 @@ html, body {
 h2 {
   text-align: center;
 }
-
+h3 {
+  text-align: center;
+  color: #ffffff
+}
 .parent {
   display: flex;
   flex-direction: row;
@@ -125,10 +128,13 @@ h2 {
   margin-top: 12px;
 }
 .skills{
+  margin-bottom: 64px;
   text-align: center;
 }
 
-
+.spacer{
+  height: 80px;
+}
 /* responsive: sidebar collapses to top, main below */
 @media (max-width: 700px) {
   .parent {
