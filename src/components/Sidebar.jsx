@@ -9,7 +9,7 @@ export default function Sidebar() {
         <h1 className="sidebar__name">Andrew Hilton</h1>
         <p className="sidebar__desc">
           aspiring ai superuser / building stuff
-          <p>Last Updated: June 7, 2025</p>
+          <p>Last Updated: June 8, 2025</p>
         </p>
         <nav className="sidebar__nav">
           <a href="#about">about</a>

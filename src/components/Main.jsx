@@ -30,8 +30,9 @@ export default function Main(){
         </p>
         <img src={project1thumbnail} className="project-thumbnails"></img>
         <h3>ChatGPT History Network Graph</h3>
-        <p>I am developing a ChatGPT message history network graph. The project utilizes tensorflow.js and the universal sentence encoder to create sentence embeddings, which is then clustered via 
-            k-means to visualize a network graph of your entire chat history exported from OpenAI. All processing is done in-browser, and no data is stored. Graph is created via Sigma.js and is not yet complete.
+        <p>The project utilizes tensorflow.js and the universal sentence encoder to create sentence embeddings, which is then clustered via 
+            k-means and mapped by semantic distance using UMAP to visualize a network graph of your chat history exported from OpenAI. All processing is done in-browser, and no data is stored.
+             Graph is created via sigma-react & graphology.js. <p>Available at: <a href='https://gpt-history-graph.vercel.app/' target="_blank">https://gpt-history-graph.vercel.app/</a></p>
         </p>
         <img src={demothumb} className="project-thumbnails"></img>
         </section>
